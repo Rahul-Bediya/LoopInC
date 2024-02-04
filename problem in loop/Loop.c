@@ -31,6 +31,34 @@ void printNumbersFromMToN(int m, int n) {
     printf("\n");
 }
 
+// Function to print numbers from m to n in forward order in recursion
+void printForward(int m, int n) {
+    // Base case: if m is greater than n, return
+    if (m > n) {
+        return;
+    }
+
+    // Print the current number in forward order
+    printf("%d ", m);
+
+    // Recursively call the function with the next number
+    printForward(m + 1, n);
+}
+
+// Function to print numbers from m to n in reverse order in recursion
+void printReverse(int m, int n) {
+    // Base case: if m is greater than n, return
+    if (m > n) {
+        return;
+    }
+
+    // Recursively call the function with the next number before printing
+    printReverse(m + 1, n);
+
+    // Print the current number in reverse order after the recursive call
+    printf("%d ", m);
+}
+
 // Function to print even and odd numbers from 1 to n
 void printEvenOddNumbers(int n) {
     // Even numbers
